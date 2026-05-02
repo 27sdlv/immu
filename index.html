@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <script>
+      if (typeof globalThis === 'undefined') {
+        (function() {
+          if (typeof self !== 'undefined') {
+            self.globalThis = self;
+          } else if (typeof window !== 'undefined') {
+            window.globalThis = window;
+          } else if (typeof global !== 'undefined') {
+            global.globalThis = global;
+          } else {
+            this.globalThis = this;
+          }
+        }());
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#2a2017" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>IMUU Mebel — 10 kunda tayyor individual mebel | Toshkent</title>
+    <meta name="description" content="IMUU Mebel — Toshkentda individual loyiha asosida 10 kunda tayyor sifatli mebel. Oshxona, yotoqxona, shkaf va ofis mebellari." />
+    <meta name="author" content="IMUU Mebel" />
+
+    <link rel="canonical" href="/" />
+
+    <meta property="og:title" content="IMUU Mebel — 10 kunda tayyor individual mebel" />
+    <meta property="og:description" content="Toshkentda 10 kunda tayyor sifatli va individual mebel. Oshxona, yotoqxona, shkaflar va ofis mebellari." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="uz_UZ" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IMUU Mebel — Premium editorial design system. All colors HSL. */
+
+@layer base {
+  :root {
+    /* Core palette */
+    --background: 38 33% 97%;          /* ivory */
+    --foreground: 25 15% 14%;          /* deep charcoal-brown */
+
+    --card: 38 33% 97%;
+    --card-foreground: 25 15% 14%;
+
+    --popover: 38 33% 97%;
+    --popover-foreground: 25 15% 14%;
+
+    /* Primary = deep charcoal-brown */
+    --primary: 25 18% 16%;
+    --primary-foreground: 38 33% 97%;
+
+    /* Secondary = warm beige */
+    --secondary: 35 25% 90%;
+    --secondary-foreground: 25 18% 16%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 25 10% 38%;
+
+    /* Accent = warm wood / brass tone */
+    --accent: 28 38% 48%;
+    --accent-foreground: 38 33% 97%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 38 33% 97%;
+
+    --border: 30 18% 86%;
+    --input: 30 18% 86%;
+    --ring: 28 38% 48%;
+
+    --radius: 0.25rem;
+
+    /* Brand-specific tokens */
+    --ivory: 38 33% 97%;
+    --beige: 34 30% 88%;
+    --wood: 28 38% 48%;
+    --wood-dark: 25 35% 28%;
+    --charcoal: 25 18% 16%;
+
+    --gradient-warm: linear-gradient(180deg, hsl(38 33% 97%) 0%, hsl(34 30% 92%) 100%);
+    --gradient-overlay: linear-gradient(180deg, hsl(25 18% 16% / 0.15) 0%, hsl(25 18% 16% / 0.55) 100%);
+    --shadow-soft: 0 20px 60px -30px hsl(25 18% 16% / 0.25);
+    --shadow-elegant: 0 30px 80px -40px hsl(25 18% 16% / 0.35);
+
+    --sidebar-background: 38 33% 97%;
+    --sidebar-foreground: 25 15% 14%;
+    --sidebar-primary: 25 18% 16%;
+    --sidebar-primary-foreground: 38 33% 97%;
+    --sidebar-accent: 35 25% 90%;
+    --sidebar-accent-foreground: 25 18% 16%;
+    --sidebar-border: 30 18% 86%;
+    --sidebar-ring: 28 38% 48%;
+  }
+
+  .dark {
+    --background: 25 18% 10%;
+    --foreground: 38 33% 95%;
+    --card: 25 18% 10%;
+    --card-foreground: 38 33% 95%;
+    --popover: 25 18% 10%;
+    --popover-foreground: 38 33% 95%;
+    --primary: 38 33% 95%;
+    --primary-foreground: 25 18% 10%;
+    --secondary: 25 15% 18%;
+    --secondary-foreground: 38 33% 95%;
+    --muted: 25 15% 18%;
+    --muted-foreground: 35 15% 65%;
+    --accent: 28 38% 55%;
+    --accent-foreground: 25 18% 10%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 38 33% 95%;
+    --border: 25 15% 22%;
+    --input: 25 15% 22%;
+    --ring: 28 38% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    /* Remove tap highlight on mobile Chrome/Android */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* Support for notched phones */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "kern";
+    /* Prevent horizontal overflow on mobile */
+    overflow-x: hidden;
+    /* Better text rendering on Android */
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    font-feature-settings: "ss01", "liga", "kern";
+  }
+
+  /* Minimum touch target size for accessibility & mobile UX */
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Smooth scrolling only when no reduce-motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer utilities {
+  .container-editorial {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10;
+  }
+
+  .fade-up {
+    animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hairline {
+    @apply h-px w-12 bg-accent;
+  }
+}
