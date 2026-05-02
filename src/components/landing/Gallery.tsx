@@ -1,22 +1,22 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import g6 from "@/assets/gallery-6.jpg";
+import w1 from "@/assets/work-1.jpg";
+import w2 from "@/assets/work-2.jpg";
+import w3 from "@/assets/work-3.jpg";
+import w4 from "@/assets/work-4.jpg";
+import w5 from "@/assets/work-5.jpg";
+import w6 from "@/assets/work-6.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ITEMS = [
-  { src: g1, alt: "Individual mehmonxona mebeli", className: "md:col-span-2 md:row-span-2 aspect-[4/5]" },
-  { src: g2, alt: "Yog'och shkaf detali", className: "aspect-[4/3]" },
-  { src: g3, alt: "Mehmonxona TV qismi", className: "aspect-[4/3]" },
-  { src: g4, alt: "Garderob xonasi", className: "md:col-span-2 aspect-[16/9]" },
-  { src: g5, alt: "Kitob javoni", className: "aspect-square" },
-  { src: g6, alt: "Oshxona oroli", className: "aspect-square" },
+  { src: w2, alt: "Modern dahliz mebeli", className: "md:col-span-2 md:row-span-2 aspect-[4/5]" },
+  { src: w1, alt: "Oynali dahliz dizayni", className: "aspect-[4/5]" },
+  { src: w3, alt: "Individual shkaf", className: "aspect-[4/5]" },
+  { src: w4, alt: "Yotoqxona mebel to'plami", className: "md:col-span-2 aspect-[16/9]" },
+  { src: w5, alt: "Yotoqxona interyeri", className: "aspect-square" },
+  { src: w6, alt: "Zamonaviy oshxona", className: "aspect-square" },
 ];
 
 const Gallery = () => {
